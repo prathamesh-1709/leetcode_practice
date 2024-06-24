@@ -1,4 +1,5 @@
 # 1)this is how u swap the numbers using tuple unpacking
+
 def tuple_unpacking(lis,pos1,pos2):
     get = lis[pos1-1],lis[pos2-1]
     lis[pos2-1],lis[pos1-1] = get 
@@ -8,3 +9,26 @@ List = [23, 65, 19, 90]
  
 pos1, pos2  = 1, 3    
 print(tuple_unpacking(List,pos1,pos2))
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+#2)Given two lists with elements and indices, write a Python program to find elements of list 1 at indices present in list 2. 
+
+def lis_given(lis1,lis2):
+    res = []
+    if len(lis2) < len(lis1):
+        for i in lis2:
+            res.append(lis1[i])
+        
+            
+    return res
+
+lst1 = [10, 20, 30, 40, 50]
+lst2 = [0, 2, 4]
+print(lis_given(lst1,lst2))
+output: [10, 30, 50]
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
